@@ -43,7 +43,6 @@ public class HighlightingItems {
     public static void onChat(Text message) {
         String text = message.getString();
         if(!text.contains("[$] Ваш баланс: ")) return;
-        double bal = Double.parseDouble(text.split("баланс: ")[1].replace("$", "").replace(",", ""));
-        balance = bal;
+        balance = Double.parseDouble(text.split("баланс: ")[1].replace("$", "").replace(",", ""));
     }
 }

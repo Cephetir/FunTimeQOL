@@ -17,13 +17,12 @@ public class AutoAHRefresh {
 
     public static void onTick() {
         if (!enabled || mc.player == null || mc.world == null || mc.currentScreen == null) return;
-        if (ticks++ < wait) return;
-        ticks = 0;
         Screen screen = mc.currentScreen;
         if (!(screen instanceof GenericContainerScreen chest)) return;
-
         String name = chest.getNarratedTitle().getString();
         if (!name.startsWith("[☃] Аукционы ")) return;
+        if (ticks++ < wait) return;
+        ticks = 0;
 
         for (Slot slot : chest.getScreenHandler().slots) {
             if (!slot.hasStack()) continue;

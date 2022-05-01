@@ -35,7 +35,7 @@ public class HighlightingItems {
         if (price >= balance)
             Screen.fill(matrices, slot.x, slot.y, slot.x + 16, slot.y + 16, Color.RED.getRGB());
         else if (price >= balance / 3)
-            Screen.fill(matrices, slot.x, slot.y, slot.x + 16, slot.y + 16, Color.YELLOW.getRGB());
+            Screen.fill(matrices, slot.x, slot.y, slot.x + 16, slot.y + 16, Color.ORANGE.getRGB());
         else
             Screen.fill(matrices, slot.x, slot.y, slot.x + 16, slot.y + 16, Color.GREEN.getRGB());
     }
